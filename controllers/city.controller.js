@@ -70,5 +70,26 @@ module.exports = {
                 result: rows
             }).end();
         });
+    },
+
+    deleteCityByID(req, res, next) {
+        console.log('deleteCityByID called');
+
+        let city_id = req.params.ID;
+
+        let query = {
+            sql: 'DELETE FROM city WHERE ID=?',
+            values: [ city_id ],
+            timeout: 2000
+        }
+
+        db.query(query, (error, rows, fields) => {
+            res.status(200).json ({
+                status: {
+                    query: 'OK'
+                },
+                result: rows
+            }).end();
+        });
     }
 }
