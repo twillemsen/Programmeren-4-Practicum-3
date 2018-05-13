@@ -14,11 +14,11 @@ app.use(bodyParser.json());
 
 app.use(morgan('dev'));
 
-app.use('/api', city_routes);
+app.use('/api/v1', city_routes);
 
 app.get('/test', function(req, res, next) {
     res.status(200).json({
-        "test": "Dit is een test"})
+        "test": "Dit is een test"});
 });
 
 app.listen(port, () => {
