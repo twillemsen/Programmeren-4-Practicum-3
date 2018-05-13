@@ -1,13 +1,13 @@
 {
-  "name": "server",
+  "name": "Practicum-3",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "node node_modules/mocha/bin/_mocha ./test/*test.js --reporter spec --exit",
-    "start": "nodemon ."
+    "start": "nodemon server.js"
   },
-  "author": "",
+  "author": "Tobias",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
